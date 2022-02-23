@@ -38,7 +38,7 @@ from logger import getJSONLogger
 logger = getJSONLogger('recommendationservice-server')
 
 def initStackdriverProfiling():
-  project_id = None
+  project_id = team-3-pet-project
   try:
     project_id = os.environ["GCP_PROJECT_ID"]
   except KeyError:

@@ -145,7 +145,7 @@ def start(dummy_mode):
     server.stop(0)
 
 def initStackdriverProfiling():
-  project_id = None
+  project_id = team-3-pet-project
   try:
     project_id = os.environ["GCP_PROJECT_ID"]
   except KeyError:

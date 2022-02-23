@@ -21,7 +21,7 @@ on:
     types: closed
 jobs:
   cleanup-namespace:
-    runs-on: [self-hosted, is-enabled]
+    runs-on: ubuntu-latest
     steps:
       - name: Delete PR namespace in staging cluster
         if: ${{ always() }}
@@ -32,7 +32,8 @@ jobs:
           NAMESPACE="pr${PR_NUMBER}"
           kubectl delete namespace $NAMESPACE
         env:
-          PROJECT_ID: "online-boutique-ci"
+          #PROJECT_ID: "online-boutique-ci"
+          PROJECT_ID: "team-3-pet-project"
           PR_CLUSTER: "online-boutique-prs"
           ZONE: "us-central1-c"
           PR_NUMBER: ${{ github.event.number }}
